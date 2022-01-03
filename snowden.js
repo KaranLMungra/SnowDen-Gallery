@@ -9,7 +9,7 @@ function nextPreview() {
     var nextElem = document.getElementById("snowden-next");
     var previewTitleElem = document.getElementById("snowden-preview-title");
     var nextTitleElem = document.getElementById("snowden-next-title");
-    var prevImagePath = "url(" + "'/img/" + images[index] + "'" + ")";
+    var prevImagePath = "url(" + "'img/" + images[index] + "'" + ")";
     previewElem.style.background = prevImagePath;
     previewElem.style.backgroundSize = "100% 100%";
     previewTitleElem.innerHTML = imagesTitle[index];
@@ -18,7 +18,7 @@ function nextPreview() {
     } else {
         index = 0;
     }
-    var nextImagePath = "url(" + "'/img/" + images[index] + "'" + ")";
+    var nextImagePath = "url(" + "'img/" + images[index] + "'" + ")";
     nextElem.style.background = nextImagePath;
     nextElem.style.backgroundSize = "100% 100%";
     nextTitleElem.innerHTML = imagesTitle[index];
