@@ -1,0 +1,114 @@
+:root {
+    /* colors */
+    --c-title-fg: rgb(255, 255, 255);
+    --c-container-bg: rgb(27, 27, 27);
+    --c-container-shadow: #343535;
+    --c-container-bg1: #393a3a;
+    /* fonts */
+    --f-title-size: 2rem;
+    --f-title-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.snowden-container {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    padding: 2rem;
+    left: 10%;
+    background-color: var(--c-container-bg);
+    background-image: linear-gradient(100deg, var(--c-container-bg1) 25%, var(--c-container-bg) 100%);
+    box-shadow: 0px 0px 12px -3px var(--c-container-shadow);
+}
+
+.snowden-title {
+    font-size: var(--f-title-size);
+    font-family: var(--f-title-font);
+    font-weight: bolder;
+    height: 20%;
+    color: var(--c-title-fg);
+    position: relative;
+}
+
+.snowden-preview-container {
+    position: relative;
+    width: 60%;
+    height: 80%;
+    background: url('/img/b1.jpg');
+    background-size: 100% 100%;
+    float: left;
+    background-color: var(--c-container-bg);
+    box-shadow: 0px 0px 4px 2px var(--c-container-shadow);
+}
+
+.snowden-next-container {
+    position: relative;
+    top: 25%;
+    width: 30%;
+    background: url('/img/b2.jpg');
+    background-size: 100% 100%;
+    height: 30%;
+    background-color: black;
+    float: right;
+    background-color: var(--c-container-bg);
+    box-shadow: 0px 0px 4px 2px var(--c-container-shadow);
+}
+
+.snowden-img-info {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    color: white;
+    font-family: var(--f-title-font);
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(-25%);
+    opacity: 0%;
+    transition: transform linear 250ms, opacity ease-out 500ms;
+}
+
+.snowden-img-info-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.snowden-img-info-sub {
+    font-size: 0.7rem;
+}
+
+.snowden-preview-container:hover .snowden-img-info,
+.snowden-next-container:hover .snowden-img-info {
+    transform: translateY(0%);
+    opacity: 100%;
+}
+
+.snowden-next-container:hover .snowden-next-btn {
+    transform: translateY(0%);
+    opacity: 100%;
+}
+
+.snowden-next-btn {
+    text-decoration: none;
+    width: 100%;
+    padding: 0.5rem;
+    height: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: transparent;
+    display: block;
+    border: none;
+    position: relative;
+    color: white;
+    font-family: var(--f-title-font);
+}
